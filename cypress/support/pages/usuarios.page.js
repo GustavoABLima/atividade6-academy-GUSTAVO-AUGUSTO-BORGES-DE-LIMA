@@ -7,7 +7,8 @@ export default class UserPage {
     buttonCancelar = 'button[class="sc-lcIPJg ifkIA-D"]'
     buttonProximo = 'button[id="paginacaoProximo"]'
     buttonAnterior = 'button[id="paginacaoVoltar"]'
-    
+    buttonEditar = 'button[type="button"]'
+    buttonSalvar = '.sc-kpDqfm.dGvNqp'
     typeName(name) {
         cy.get(this.inputName).type(name)
     }
@@ -34,5 +35,13 @@ export default class UserPage {
 
     anterior() {
         cy.get(this.buttonAnterior).click()
+    }
+
+    editar() {
+        cy.get(this.buttonEditar).click()
+    }
+
+    salvar() {
+        cy.get(this.buttonSalvar).click()
     }
 }
