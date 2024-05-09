@@ -1,10 +1,17 @@
 # language: pt
+@pesquisa
 Funcionalidade: Pesquisa de Usuário
 
  Cenario: Pesquisa de usuário
      Dado que acessei o site
      Quando pesquiso pelo nome ou email de um usuário existente
      Então todos os usuários com o nome pesquisado devem ser exibidos
+
+ Cenario: Pesquisa de usuário pelo nome para saber o id
+     Dado que acessei o site
+     Quando pesquiso pelo nome de um usuário existente
+     E clico no botão "Ver Detalhes" para saber o id
+     Então o id do usuário com o nome pesquisado será exibido
 
  Cenario: Pesquisa de usuário inexistente
      Dado que acessei o site
@@ -15,7 +22,7 @@ Funcionalidade: Pesquisa de Usuário
  Cenario: Pesquisa de usuário pelo id
      Dado que acessei o site
      Quando pesquiso pelo id de um usuário existente
-     Então o usuário com o id pesquisado será exibido
+     Então os dados do usuário com o nome pesquisado será exibido
 
  Cenario: Pesquisa de usuário por id inexistente
      Dado que acessei o site
